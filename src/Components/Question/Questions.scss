@@ -1,3 +1,7 @@
+.question-container {
+  min-height: 35%;
+}
+
 .remaining-questions {
   text-align: left;
   font-size: 16px;
@@ -8,7 +12,7 @@
 .question {
   text-align: left;
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0;
   color: white;
 }

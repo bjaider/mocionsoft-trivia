@@ -3,7 +3,7 @@ import './Questions.scss'
 const Question = ({question, questionNumber, questionsTotal}) => {
   console.log(question)
   return (
-    <div>
+    <div className='question-container'>
       <p className="remaining-questions">
         {`Question ${questionNumber} of ${questionsTotal}`}
       </p>
