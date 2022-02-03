@@ -18,3 +18,14 @@
     background-color: white;
   }
 }
+
+.trivia-top{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.close-button{
+  background-color: transparent;
+  padding: 0;
+}
