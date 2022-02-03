@@ -3,6 +3,14 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 50px;
   box-sizing: border-box;
+  padding: 50px;
+}
+
+.begin-button {
+  background-color: #ff6f8a;
+  color: white;
+  &:hover {
+    background-color: #fa4c6c;
+  }
 }

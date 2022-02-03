@@ -1,15 +1,15 @@
 import React from 'react'
-
-const Question = ({question,questionNumber,questionsTotal}) => {
-console.log(question)
-  return <div>
-      <span>
-          {`Question ${questionNumber} of ${questionsTotal}`}
-      </span>
-      <p>
-          {question.question}
+import './Questions.scss'
+const Question = ({question, questionNumber, questionsTotal}) => {
+  console.log(question)
+  return (
+    <div>
+      <p className="remaining-questions">
+        {`Question ${questionNumber} of ${questionsTotal}`}
       </p>
-  </div>
+      <p className="question" >{question.question}</p>
+    </div>
+  )
 }
 
 export default Question
