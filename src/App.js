@@ -2,12 +2,14 @@ import './App.css'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Home from './Views/Home/Home'
 import Trivia from './Views/Trivia/Trivia'
+import Results from './Views/Results/Results'
 function App() {
   return (
     <div className="App">
       <Router>
         <Route path="/" exact component={Home} />
         <Route path="/questions" component={Trivia} />
+        <Route path="/results" component={Results} />
       </Router>
     </div>
   )
