@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import CategoryImage from '../../Components/CategoryImage/CategoryImage'
 import Question from '../../Components/Question/Question'
@@ -6,19 +6,29 @@ import useGetQuestions from '../../Hooks/useGetQuestions'
 import Button from '../../Components/Button/Button'
 import './Trivia.scss'
 import Countdown from '../../Components/Countdown/Countdown'
+import {Context} from '../../context/ContextProvider'
+import ViewTitle from '../../Components/ViewTitle/ViewTitle'
 const Trivia = () => {
   let history = useHistory()
   const {questionsData} = useGetQuestions()
   const [question, setQuestion] = useState(0)
   const [questionNumber, setQuestionNumber] = useState(1)
+  const {answers, setAnswers} = useContext(Context)
 
+  console.log('ANNNWNWNWN', question.correct_answer)
   useEffect(() => {
     if (questionsData) {
-      setQuestion(questionsData[questionNumber])
+      setQuestion(questionsData[questionNumber - 1])
     }
   }, [questionNumber, questionsData])
-  const answerOnClick = () => {
-    if (questionNumber < 9) {
+  const answerOnClick = (answer) => {
+    console.log('jajajaja', question.correct_answer, answer)
+    if (question.correct_answer === answer) {
+      setAnswers([...answers, {question: question.question, correct: true}])
+    } else {
+      setAnswers([...answers, {question: question.question, correct: false}])
+    }
+    if (questionNumber < 10) {
       setQuestionNumber(questionNumber + 1)
     } else {
       history.push('/results')
@@ -39,6 +49,7 @@ const Trivia = () => {
         </Button>
         <Countdown time={10} questionNumber={questionNumber} />
       </div>
+      <ViewTitle text={question.category} className={'trivia-title'} />
       <CategoryImage
         src={
           'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643863251/MocionSoft/sports_1_dwndn4.png'
@@ -51,10 +62,13 @@ const Trivia = () => {
         questionsTotal={10}
       />
       <div className="answer-buttons">
-        <Button className="answer-button" onClick={() => answerOnClick()}>
+        <Button className="answer-button" onClick={() => answerOnClick('True')}>
           True
         </Button>
-        <Button className="answer-button" onClick={() => answerOnClick()}>
+        <Button
+          className="answer-button"
+          onClick={() => answerOnClick('False')}
+        >
           False
         </Button>
       </div>

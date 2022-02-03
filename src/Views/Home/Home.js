@@ -1,16 +1,21 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
+import {useHistory} from 'react-router-dom'
 import Button from '../../Components/Button/Button'
 import Instructions from '../../Components/Instructions/Instructions'
-import WelcomeMessage from '../../Components/WelcomeMessage/WelcomeMessage'
+import ViewTitle from '../../Components/ViewTitle/ViewTitle'
 import './Home.scss'
 const Home = () => {
-  let history=useHistory()
+  let history = useHistory()
   return (
     <div className="container">
-      <WelcomeMessage />
+      <ViewTitle text={'Welcome to the challenge Trivia Challenge!'} />
       <Instructions />
-      <Button className="begin-button" onClick={()=>history.push("/questions")}>BEGIN</Button>
+      <Button
+        className="begin-button"
+        onClick={() => history.push('/questions')}
+      >
+        BEGIN
+      </Button>
     </div>
   )
 }

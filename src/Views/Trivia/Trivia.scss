@@ -4,6 +4,13 @@
   padding: 50px;
   box-sizing: border-box;
 }
+
+.trivia-title {
+  margin: 20px 0;
+  color: white;
+  font-size: 24px;
+  min-height: 8%;
+}
 .answer-buttons {
   margin-top: 50px;
   display: flex;
@@ -19,13 +26,13 @@
   }
 }
 
-.trivia-top{
-display: flex;
-justify-content: space-between;
-align-items: center;
+.trivia-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.close-button{
+.close-button {
   background-color: transparent;
   padding: 0;
 }
