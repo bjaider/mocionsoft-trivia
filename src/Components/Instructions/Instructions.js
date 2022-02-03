@@ -3,8 +3,8 @@ import './Instructions.scss'
 const Instructions = () => {
   return (
     <>
-      <p className='instruction-tex'>You will be presented with 10 True or False questions.</p>
-      <p className='points-question'>Can you score 100%?</p>
+      <p className='instruction-text'>You will be presented with 10 True or False questions.</p>
+      <p className='instruction-text'>Can you score 100%?</p>
     </>
   )
 }
