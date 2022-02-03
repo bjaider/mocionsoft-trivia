@@ -10,7 +10,7 @@ const Home = () => {
     <div className="container">
       <WelcomeMessage />
       <Instructions />
-      <Button className="begin-button" onClick={()=>history.push("/question/1")}>BEGIN</Button>
+      <Button className="begin-button" onClick={()=>history.push("/questions")}>BEGIN</Button>
     </div>
   )
 }
