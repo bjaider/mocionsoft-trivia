@@ -1,10 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
   box-sizing: border-box;
   padding: 50px;
+}
+
+.home-title {
+  margin: 0;
 }
 
 .begin-button {

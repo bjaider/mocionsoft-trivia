@@ -8,7 +8,7 @@ const Home = () => {
   let history = useHistory()
   return (
     <div className="container">
-      <ViewTitle text={'Welcome to the challenge Trivia Challenge!'} />
+      <ViewTitle text={'Welcome to the challenge Trivia Challenge!'} className={'home-title'}/>
       <Instructions />
       <Button
         className="begin-button"
