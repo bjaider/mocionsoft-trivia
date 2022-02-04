@@ -17,11 +17,7 @@
 }
 .play-again-button {
   color: $primaryColor;
-  &:hover {
-    background-color: $secondaryColor;
-    color: $whiteColor;
-    transform: scale(1.04)
-  }
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -31,5 +27,10 @@
   .play-again-button {
     width: 50%;
     margin: 0 auto;
+    &:hover {
+      background-color: $secondaryColor;
+      color: $whiteColor;
+      transform: scale(1.04)
+    }
   }
 }

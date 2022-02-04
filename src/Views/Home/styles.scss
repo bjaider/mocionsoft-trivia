@@ -15,10 +15,7 @@
 .begin-button {
   background-color: $secondaryColor;
   color: $whiteColor;
-  &:hover {
-    background-color: #fa4c6c;
-    transform: scale(1.04)
-  }
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -28,5 +25,9 @@
   .begin-button {
     width: 50%;
     margin: 0 auto;
+    &:hover {
+      background-color: #fa4c6c;
+      transform: scale(1.04)
+    }
   }
 }

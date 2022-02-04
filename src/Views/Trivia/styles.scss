@@ -23,11 +23,6 @@
   margin: 10px 0;
   font-size: 20px;
   width: 100%;
-  &:hover {
-    background-color: $secondaryColor;
-    color: $whiteColor;
-    transform: scale(1.04)
-  }
 }
 
 .trivia-top {
@@ -55,7 +50,7 @@
   .answer-buttons {
     flex-direction: row;
     height: 10%;
-    div{
+    div {
       width: 100%;
       margin: 0 10px;
       height: 100%;
@@ -63,6 +58,10 @@
   }
   .answer-button {
     height: 100%;
+    &:hover {
+      background-color: $secondaryColor;
+      color: $whiteColor;
+      transform: scale(1.04);
+    }
   }
-
 }
