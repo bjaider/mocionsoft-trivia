@@ -6,7 +6,7 @@ import './Countdown.scss'
 
 const Countdown = ({time}) => {
   let history = useHistory()
-  const {gameOver, setGameOver} = useContext(Context)
+  const {setGameOver} = useContext(Context)
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(time))
   useEffect(() => {
     const timer = setInterval(() => {
