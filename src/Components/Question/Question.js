@@ -1,7 +1,7 @@
 import React from 'react'
 import './Questions.scss'
 const Question = ({question, questionNumber, questionsTotal}) => {
-  console.log(question)
+  console.log(question.correct_answer)
   return (
     <div className='question-container'>
       <p className="remaining-questions">

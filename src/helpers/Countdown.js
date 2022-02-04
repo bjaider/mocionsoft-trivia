@@ -1,10 +1,10 @@
-const calculateTimeLeft = (timeLeft,timer) => {
-
-
+const calculateTimeLeft = (timeLeft, timer, history, setGameOver) => {
   if (timeLeft > 0) {
-    timeLeft =--timeLeft
-  }else{
-    clearInterval(timer);
+    timeLeft = --timeLeft
+  } else {
+    setGameOver(true)
+    history.push('/results')
+    clearInterval(timer)
   }
 
   return timeLeft
