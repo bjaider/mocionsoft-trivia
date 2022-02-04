@@ -6,12 +6,20 @@ const QuestionScore = ({question, correct, index}) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
-    <div className="question-score-container">
-      <Modal show={showModal} setShowModal={setShowModal}>
-        <p>{question}</p>
-      </Modal>
+    <div className="question-score-container" key={index}>
+      {question ? (
+        <Modal show={showModal} setShowModal={setShowModal}>
+          <p>{question}</p>
+        </Modal>
+      ) : (
+        ''
+      )}
       <p className="question-index">{index}</p>
-      <p className="show-question" onClick={() => setShowModal(true)}>
+      <p
+        className="show-question"
+        onClick={() => setShowModal(true)}
+        style={question ? {color: 'white'} : {color: '#999999'}}
+      >
         Show Question
       </p>
       {correct ? (
