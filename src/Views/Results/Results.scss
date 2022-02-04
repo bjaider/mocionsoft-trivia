@@ -8,9 +8,22 @@
   justify-content: space-around;
 }
 
-.results-title{
+.results-title {
   width: 40%;
   margin: 0 auto;
   color: white;
   margin-bottom: 20px;
+}
+.play-again-button {
+  color: #3492f4;
+}
+
+@media only screen and (min-width: 1025px) {
+  .results-container {
+    padding: 50px 20%;
+  }
+  .play-again-button {
+    width: 50%;
+    margin: 0 auto;
+  }
 }

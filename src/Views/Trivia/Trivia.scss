@@ -43,3 +43,23 @@
   display: flex;
   align-items: center;
 }
+
+@media only screen and (min-width: 1025px) {
+  .trivia-container {
+    padding: 50px 20%;
+  }
+
+  .answer-buttons {
+    flex-direction: row;
+    height: 10%;
+    div{
+      width: 100%;
+      margin: 0 10px;
+      height: 100%;
+    }
+  }
+  .answer-button {
+    height: 100%;
+  }
+
+}
