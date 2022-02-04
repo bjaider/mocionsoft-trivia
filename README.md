@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+<h1 align="center">Welcome to MocionSoft Trivia 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This project is a technical test carried out by Serempre to find out the skills of the potential employee. The test consisted of developing a trivia game, which consists of answering true or false questions in less than 2 minutes. For this development, there were some wireframes to which some designs were added to improve the UI and UX.
 
-## Available Scripts
+### ✨ [Demo](https://mocionsoft-trivia.netlify.app/)
 
-In the project directory, you can run:
+## Install
 
-### `npm start`
+```sh
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+npm start
+```
+## Views
+- ### Home
+   It's the main view of the application
+- ### Results
+   It's the view where the results of the participant are shown
+- ### Trivia
+   It's the view where the questions are displayed
+## Componentes
+- ### Button
+   Component that represents a clickable element of type button
+- ### CategoryImage
+   Render the image of the question category
+- ### Countdown
+   Render countdown for questions
+- ### Instructions
+   Render the instructions in the main view
+- ### Modal
+   Render the modal in the results view for the questions that were answered
+- ### Question
+   Render the current question
+- ### QuestionScore
+   Render the row in the result table
+- ### ViewTitle
+   Render the titles for each view
+## Context
+- ### ContextProvider
+   It's used to manage the global states of the application
+## Helpers
+- ### Countdown
+   Manage the countdown logic
+- ### Categories
+   Manage the logic of the images of the categories
+## Hooks
+- ### useGetQuestions
+   Make the request to bring the data of the questions
+## Lotties
+   It's a tool that allows you to create and edit animations. In this case it's used for the loading animation
+## Media
+- ### CategoryImage
+   It's used to save category name and custom image
+## Styles
+- ### Variables
+   It's used to manage the global variables of the colors
 
-### `npm test`
+## Author
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+👤 **Jaider Bermudez**
 
-### `npm run build`
+* Github: [@bjaider](https://github.com/bjaider)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
