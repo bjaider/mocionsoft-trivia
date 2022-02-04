@@ -34,7 +34,10 @@ const Results = () => {
       </div>
       <Button
         className={'play-again-button'}
-        onClick={() => history.push('/questions')}
+        onClick={() => {
+          history.push('/questions')
+          setAnswers([])
+        }}
       >
         PLAY AGAIN?
       </Button>
