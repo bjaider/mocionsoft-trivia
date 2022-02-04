@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import {useHistory} from 'react-router-dom'
+import Button from '../../Components/Button/Button'
 import QuestionScore from '../../Components/QuestionScore/QuestionScore'
 import ViewTitle from '../../Components/ViewTitle/ViewTitle'
 import {Context} from '../../context/ContextProvider'
@@ -22,13 +23,21 @@ const Results = () => {
         text={`You Scored ${correctAnswer.length} of 10`}
         className={'results-title'}
       />
-      {answers.map((answer, index) => (
-        <QuestionScore
-          question={answer.question}
-          correct={answer.correct}
-          index={index + 1}
-        />
-      ))}
+      <div>
+        {answers.map((answer, index) => (
+          <QuestionScore
+            question={answer.question}
+            correct={answer.correct}
+            index={index + 1}
+          />
+        ))}
+      </div>
+      <Button
+        className={'play-again-button'}
+        onClick={() => history.push('/questions')}
+      >
+        PLAY AGAIN?
+      </Button>
     </div>
   )
 }
