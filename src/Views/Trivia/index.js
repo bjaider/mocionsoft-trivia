@@ -68,7 +68,7 @@ const Trivia = () => {
               />
             </Button>
 
-            <Countdown time={10} questionNumber={questionNumber} />
+            <Countdown time={120} questionNumber={questionNumber} />
           </div>
           <ViewTitle text={question.category} className={'trivia-title'} />
           <CategoryImage src={Categories(question.category)} alt={'Category'} />
