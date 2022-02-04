@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom'
 import {Context} from '../../context/ContextProvider'
-import calculateTimeLeft from '../../Helpers/Countdown'
+import calculateTimeLeft from '../../helpers/Countdown'
 import './styles.scss'
 
 const Countdown = ({time}) => {

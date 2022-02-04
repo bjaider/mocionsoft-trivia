@@ -10,7 +10,7 @@ import ViewTitle from '../../Components/ViewTitle'
 import Lottie from 'react-lottie'
 import animationData from '../../Lotties/loading.json'
 import {Bounce} from 'react-awesome-reveal'
-import Categories from '../../Helpers/Categories'
+import Categories from '../../helpers/Categories'
 import './styles.scss'
 const Trivia = () => {
   let history = useHistory()
