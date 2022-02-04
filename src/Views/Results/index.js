@@ -1,10 +1,10 @@
 import React, {useContext} from 'react'
 import {useHistory} from 'react-router-dom'
-import Button from '../../Components/Button/Button'
-import QuestionScore from '../../Components/QuestionScore/QuestionScore'
-import ViewTitle from '../../Components/ViewTitle/ViewTitle'
+import Button from '../../Components/Button'
+import QuestionScore from '../../Components/QuestionScore'
+import ViewTitle from '../../Components/ViewTitle'
 import {Context} from '../../Context/ContextProvider'
-import './Results.scss'
+import './styles.scss'
 const Results = () => {
   const {answers, setAnswers, gameOver} = useContext(Context)
   let history = useHistory()

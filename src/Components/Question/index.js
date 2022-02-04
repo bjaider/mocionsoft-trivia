@@ -1,5 +1,5 @@
 import React from 'react'
-import './Questions.scss'
+import './styles.scss'
 const Question = ({question, questionNumber, questionsTotal}) => {
   return (
     <div className='question-container'>

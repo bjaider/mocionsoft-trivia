@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import Button from '../Button/Button'
-import Modal from '../Modal/Modal'
-import './QuestionScore.scss'
+import Button from '../Button'
+import Modal from '../Modal'
+import './styles.scss'
 const QuestionScore = ({question, correct, index}) => {
   const [showModal, setShowModal] = useState(false)
 

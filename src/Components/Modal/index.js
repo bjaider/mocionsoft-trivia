@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../Button/Button'
-import './Modal.scss'
+import Button from '../Button'
+import './styles.scss'
 const Modal = ({setShowModal, show, children}) => {
   const showHideClassName = show ? 'modal display-block' : 'modal display-none'
   return (

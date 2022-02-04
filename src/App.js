@@ -1,8 +1,8 @@
 import './App.css'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Home from './Views/Home/Home'
-import Trivia from './Views/Trivia/Trivia'
-import Results from './Views/Results/Results'
+import Home from './Views/Home'
+import Trivia from './Views/Trivia'
+import Results from './Views/Results'
 function App() {
   return (
     <div className="App">

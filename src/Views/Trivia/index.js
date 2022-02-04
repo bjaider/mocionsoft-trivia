@@ -1,17 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {useHistory} from 'react-router-dom'
-import CategoryImage from '../../Components/CategoryImage/CategoryImage'
-import Question from '../../Components/Question/Question'
+import CategoryImage from '../../Components/CategoryImage'
+import Question from '../../Components/Question'
 import useGetQuestions from '../../Hooks/useGetQuestions'
-import Button from '../../Components/Button/Button'
-import './Trivia.scss'
-import Countdown from '../../Components/Countdown/Countdown'
+import Button from '../../Components/Button'
+import Countdown from '../../Components/Countdown'
 import {Context} from '../../Context/ContextProvider'
-import ViewTitle from '../../Components/ViewTitle/ViewTitle'
+import ViewTitle from '../../Components/ViewTitle'
 import Lottie from 'react-lottie'
 import animationData from '../../Lotties/loading.json'
 import {Bounce} from 'react-awesome-reveal'
 import Categories from '../../Helpers/Categories'
+import './styles.scss'
 const Trivia = () => {
   let history = useHistory()
   const {questionsData} = useGetQuestions()

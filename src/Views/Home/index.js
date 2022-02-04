@@ -1,9 +1,9 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom'
-import Button from '../../Components/Button/Button'
-import Instructions from '../../Components/Instructions/Instructions'
-import ViewTitle from '../../Components/ViewTitle/ViewTitle'
-import './Home.scss'
+import Button from '../../Components/Button'
+import Instructions from '../../Components/Instructions'
+import ViewTitle from '../../Components/ViewTitle'
+import './styles.scss'
 const Home = () => {
   let history = useHistory()
   return (

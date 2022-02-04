@@ -1,5 +1,5 @@
 import React from 'react'
-import './ViewTitle.scss'
+import './styles.scss'
 const ViewTitle = ({text, className}) => {
   return (
     <>
