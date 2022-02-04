@@ -24,7 +24,9 @@
   font-size: 20px;
   width: 100%;
   &:hover {
-    background-color: $whiteColor;
+    background-color: $secondaryColor;
+    color: $whiteColor;
+    transform: scale(1.04)
   }
 }
 
