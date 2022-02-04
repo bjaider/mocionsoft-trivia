@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom'
-import {Context} from '../../Context/ContextProvider'
+import {Context} from '../../context/ContextProvider'
 import calculateTimeLeft from '../../Helpers/Countdown'
 import './styles.scss'
 

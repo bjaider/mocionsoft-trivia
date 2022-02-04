@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom'
 import Button from '../../Components/Button'
 import QuestionScore from '../../Components/QuestionScore'
 import ViewTitle from '../../Components/ViewTitle'
-import {Context} from '../../Context/ContextProvider'
+import {Context} from '../../context/ContextProvider'
 import './styles.scss'
 const Results = () => {
   const {answers, setAnswers, gameOver} = useContext(Context)
