@@ -1,11 +1,16 @@
 import React, {useContext} from 'react'
+import {useHistory} from 'react-router-dom'
 import QuestionScore from '../../Components/QuestionScore/QuestionScore'
 import ViewTitle from '../../Components/ViewTitle/ViewTitle'
 import {Context} from '../../context/ContextProvider'
 import './Results.scss'
 const Results = () => {
   const {answers, setAnswers} = useContext(Context)
+  let history = useHistory()
   const correctAnswer = answers.filter((answer) => answer.correct === true)
+  if (answers.length < 10) {
+    history.push('/')
+  }
   return (
     <div className="results-container">
       <ViewTitle
