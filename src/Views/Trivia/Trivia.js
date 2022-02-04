@@ -8,21 +8,29 @@ import './Trivia.scss'
 import Countdown from '../../Components/Countdown/Countdown'
 import {Context} from '../../context/ContextProvider'
 import ViewTitle from '../../Components/ViewTitle/ViewTitle'
+import Lottie from 'react-lottie'
+import animationData from '../../Lotties/loading.json'
+import {Bounce} from 'react-awesome-reveal'
 const Trivia = () => {
   let history = useHistory()
   const {questionsData} = useGetQuestions()
   const [question, setQuestion] = useState(0)
   const [questionNumber, setQuestionNumber] = useState(1)
   const {answers, setAnswers} = useContext(Context)
-
-  console.log('ANNNWNWNWN', question.correct_answer)
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
   useEffect(() => {
     if (questionsData) {
       setQuestion(questionsData[questionNumber - 1])
     }
   }, [questionNumber, questionsData])
   const answerOnClick = (answer) => {
-    console.log('jajajaja', question.correct_answer, answer)
     if (question.correct_answer === answer) {
       setAnswers([...answers, {question: question.question, correct: true}])
     } else {
@@ -39,39 +47,58 @@ const Trivia = () => {
   }
   return (
     <div className="trivia-container">
-      <div className="trivia-top">
-        <Button className={'close-button'} onClick={() => closeButtonOnClick()}>
-          <img
-            src="https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643870057/MocionSoft/close_1_m5c4mx.png"
-            width={42}
-            alt="Close Button"
+      {questionsData ? (
+        <>
+          <div className="trivia-top">
+            <Button
+              className={'close-button'}
+              onClick={() => closeButtonOnClick()}
+            >
+              <img
+                src="https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643870057/MocionSoft/close_1_m5c4mx.png"
+                width={42}
+                alt="Close Button"
+              />
+            </Button>
+
+            <Countdown time={10} questionNumber={questionNumber} />
+          </div>
+          <ViewTitle text={question.category} className={'trivia-title'} />
+          <CategoryImage
+            src={
+              'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643863251/MocionSoft/sports_1_dwndn4.png'
+            }
+            alt={'Category'}
           />
-        </Button>
-        <Countdown time={10} questionNumber={questionNumber} />
-      </div>
-      <ViewTitle text={question.category} className={'trivia-title'} />
-      <CategoryImage
-        src={
-          'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643863251/MocionSoft/sports_1_dwndn4.png'
-        }
-        alt={'Category'}
-      />
-      <Question
-        question={question}
-        questionNumber={questionNumber}
-        questionsTotal={10}
-      />
-      <div className="answer-buttons">
-        <Button className="answer-button" onClick={() => answerOnClick('True')}>
-          True
-        </Button>
-        <Button
-          className="answer-button"
-          onClick={() => answerOnClick('False')}
-        >
-          False
-        </Button>
-      </div>
+          <Question
+            question={question}
+            questionNumber={questionNumber}
+            questionsTotal={10}
+          />
+          <div className="answer-buttons">
+            <Bounce delay={200} >
+              <Button
+                className="answer-button"
+                onClick={() => answerOnClick('True')}
+              >
+                True
+              </Button>
+            </Bounce>
+            <Bounce delay={400}>
+              <Button
+                className="answer-button"
+                onClick={() => answerOnClick('False')}
+              >
+                False
+              </Button>
+            </Bounce>
+          </div>
+        </>
+      ) : (
+        <div className="loading">
+          <Lottie options={defaultOptions} height={400} width={400} />
+        </div>
+      )}
     </div>
   )
 }
