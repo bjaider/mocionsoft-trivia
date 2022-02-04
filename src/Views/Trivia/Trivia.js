@@ -6,12 +6,12 @@ import useGetQuestions from '../../Hooks/useGetQuestions'
 import Button from '../../Components/Button/Button'
 import './Trivia.scss'
 import Countdown from '../../Components/Countdown/Countdown'
-import {Context} from '../../context/ContextProvider'
+import {Context} from '../../Context/ContextProvider'
 import ViewTitle from '../../Components/ViewTitle/ViewTitle'
 import Lottie from 'react-lottie'
 import animationData from '../../Lotties/loading.json'
 import {Bounce} from 'react-awesome-reveal'
-import Categories from '../../helpers/Categories'
+import Categories from '../../Helpers/Categories'
 const Trivia = () => {
   let history = useHistory()
   const {questionsData} = useGetQuestions()

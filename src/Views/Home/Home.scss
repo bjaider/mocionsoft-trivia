@@ -1,3 +1,4 @@
+@import '../../Styles/variables';
 .container {
   display: flex;
   flex-direction: column;
@@ -12,8 +13,8 @@
 }
 
 .begin-button {
-  background-color: #ff6f8a;
-  color: white;
+  background-color: $secondaryColor;
+  color: $whiteColor;
   &:hover {
     background-color: #fa4c6c;
   }

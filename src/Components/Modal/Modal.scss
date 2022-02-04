@@ -1,3 +1,5 @@
+@import '../../Styles/variables';
+
 .modal {
   position: fixed;
   top: 0;
@@ -9,7 +11,7 @@
 
 .modal-main {
   position: fixed;
-  background: white;
+  background: $whiteColor;
   width: 80%;
   height: auto;
   top: 50%;
@@ -18,17 +20,17 @@
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #ff6f8a;
+  background-color: $secondaryColor;
 
   p {
     text-align: left;
-    color: white;
+    color: $whiteColor;
     font-size: 18px;
   }
 }
 .modal-button {
-  background-color: white;
-  color: #ff6f8a;
+  background-color: $whiteColor;
+  color: $secondaryColor;
   font-size: 18px;
 }
 .display-block {

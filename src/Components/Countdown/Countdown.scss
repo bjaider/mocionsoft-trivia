@@ -1,5 +1,7 @@
+@import '../../Styles/variables';
+
 .countdown {
-  color: white;
+  color: $whiteColor;
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 30px;

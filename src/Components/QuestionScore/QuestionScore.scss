@@ -1,3 +1,4 @@
+@import '../../Styles/variables';
 .question-score-container {
   display: flex;
   justify-content: space-between;
@@ -7,7 +8,7 @@
   }
 }
 .question-index {
-  color: white;
+  color: $whiteColor;
 }
 
 .show-question {

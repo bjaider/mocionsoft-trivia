@@ -1,5 +1,6 @@
+@import '../../Styles/variables';
 .results-container {
-  background-color: #3492f4;
+  background-color: $primaryColor;
   height: 100%;
   padding: 50px;
   box-sizing: border-box;
@@ -11,11 +12,11 @@
 .results-title {
   width: 40%;
   margin: 0 auto;
-  color: white;
+  color: $whiteColor;
   margin-bottom: 20px;
 }
 .play-again-button {
-  color: #3492f4;
+  color: $primaryColor;
 }
 
 @media only screen and (min-width: 1025px) {

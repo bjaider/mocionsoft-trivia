@@ -1,5 +1,6 @@
+@import '../../Styles/variables';
 .trivia-container {
-  background-color: #3492f4;
+  background-color: $primaryColor;
   height: 100%;
   padding: 50px;
   box-sizing: border-box;
@@ -7,7 +8,7 @@
 
 .trivia-title {
   margin: 20px 0;
-  color: white;
+  color: $whiteColor;
   font-size: 24px;
   min-height: 8%;
 }
@@ -17,13 +18,13 @@
   flex-direction: column;
 }
 .answer-button {
-  background-color: white;
-  color: #3492f4;
+  background-color: $whiteColor;
+  color: $primaryColor;
   margin: 10px 0;
   font-size: 20px;
   width: 100%;
   &:hover {
-    background-color: white;
+    background-color: $whiteColor;
   }
 }
 
