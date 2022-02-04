@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> This project is a technical test carried out by Serempre to find out the skills of the potential employee. The test consisted of developing a trivia game, which consists of answering true or false questions in less than 2 minutes. For this development, there were some wireframes to which some designs were added to improve the UI and UX.
+> This project is a technical test carried out by MocionSoft to find out the skills of the potential employee. The test consisted of developing a trivia game, which consists of answering true or false questions in less than 2 minutes. For this development, there were some wireframes to which some designs were added to improve the UI and UX.
 
 ### ✨ [Demo](https://mocionsoft-trivia.netlify.app/)
 
