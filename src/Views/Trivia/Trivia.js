@@ -54,7 +54,10 @@ const Trivia = () => {
           <div className="trivia-top">
             <Button
               className={'close-button'}
-              onClick={() => closeButtonOnClick()}
+              onClick={() => {
+                closeButtonOnClick()
+                setAnswers([])
+              }}
             >
               <img
                 src={
