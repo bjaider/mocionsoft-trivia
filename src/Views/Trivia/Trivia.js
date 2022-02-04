@@ -11,6 +11,7 @@ import ViewTitle from '../../Components/ViewTitle/ViewTitle'
 import Lottie from 'react-lottie'
 import animationData from '../../Lotties/loading.json'
 import {Bounce} from 'react-awesome-reveal'
+import Categories from '../../helpers/Categories'
 const Trivia = () => {
   let history = useHistory()
   const {questionsData} = useGetQuestions()
@@ -25,10 +26,9 @@ const Trivia = () => {
       preserveAspectRatio: 'xMidYMid slice',
     },
   }
-  
+
   useEffect(() => {
     if (questionsData) {
-      
       setQuestion(questionsData[questionNumber - 1])
     }
   }, [questionNumber, questionsData])
@@ -57,7 +57,9 @@ const Trivia = () => {
               onClick={() => closeButtonOnClick()}
             >
               <img
-                src="https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643870057/MocionSoft/close_1_m5c4mx.png"
+                src={
+                  'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643870057/MocionSoft/close_1_m5c4mx.png'
+                }
                 width={42}
                 alt="Close Button"
               />
@@ -66,19 +68,14 @@ const Trivia = () => {
             <Countdown time={100} questionNumber={questionNumber} />
           </div>
           <ViewTitle text={question.category} className={'trivia-title'} />
-          <CategoryImage
-            src={
-              'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1643863251/MocionSoft/sports_1_dwndn4.png'
-            }
-            alt={'Category'}
-          />
+          <CategoryImage src={Categories(question.category)} alt={'Category'} />
           <Question
             question={question}
             questionNumber={questionNumber}
             questionsTotal={10}
           />
           <div className="answer-buttons">
-            <Bounce delay={200} >
+            <Bounce delay={200}>
               <Button
                 className="answer-button"
                 onClick={() => answerOnClick('True')}
